@@ -1,2 +1,14 @@
+<% layout('layout/page') %>
 <h1>Новости</h1>
-<% for()
+<% for (var i=0; i<page.items.length; i++){ %>
+<div>
+    <h4>
+        <%- page.items[i].title %>
+    </h4>
+    <p>
+        <%- page.items[i].text %>
+    </p>
+    <a href="/news/<%- page.items[i].id %>.html">Подробнее</a>
+    <hr>
+</div>
+<% } %>
